@@ -22,14 +22,11 @@
 
 # Restrict access to critical files
 <FilesMatch "^\.">
-Order allow,deny
-Deny from all
+    Require all denied 
 </FilesMatch>
 <Files ~ "\.sqlite$">
-    Order allow,deny
-    Deny from all
+    Require all denied
 </Files>
 <Files ~ "\.zip$">
-    Order allow,deny
-    Deny from all
+    Require all denied
 </Files>
